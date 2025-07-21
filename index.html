@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RamCycleTracker</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="manifest" href="manifest.json" />
+</head>
+<body>
+  <header>
+    <img src="RAM_Logo_black.jpg" alt="Company Logo" class="logo-banner" />
+  </header>
+  <main>
+    <h1>RamCycleTracker</h1>
+
+    <label for="positionSelect">Position:</label>
+    <select id="positionSelect">
+      <option value="">Select Position</option>
+      <option value="rubber">Rubber Machine Operator</option>
+      <option value="plastic">Plastic Machine Operator</option>
+      <option value="diecast">Diecast Operator</option>
+      <option value="powdercoat">Powdercoat Operator</option>
+    </select>
+
+    <label for="orderId">Scan Order QR:</label>
+    <input type="text" id="orderId" placeholder="Scan order QR code..." readonly />
+
+    <div id="currentOrderDisplay"></div>
+    <div id="intervalDisplay"></div>
+    <div id="cycleStatus"></div>
+
+    <button onclick="start()">Start</button>
+    <button onclick="pause()">Pause</button>
+    <button onclick="resume()">Resume</button>
+    <button onclick="stop()">Stop</button>
+    <button onclick="copyLog()">Copy Log</button>
+
+    <pre id="log"></pre>
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>
